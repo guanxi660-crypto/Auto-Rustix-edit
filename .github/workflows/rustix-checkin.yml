@@ -39,7 +39,6 @@ jobs:
           cache-dependency-path: requirements.txt
 
       - name: 安装依赖
-        #working-directory: rustix-auto
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
@@ -48,7 +47,6 @@ jobs:
         run: python -m playwright install --with-deps chromium
 
       - name: 运行自动启动脚本
-        #working-directory: rustix-auto
         env:
           # 从 GitHub Secrets 读取账号，格式：邮箱:密码,邮箱:密码
           # 例：a@example.com:pwd1,b@example.com:pwd2
