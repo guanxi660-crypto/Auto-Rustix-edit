@@ -157,9 +157,10 @@ Uptime Kuma 调用 GitHub API 需要 Personal Access Token：
 ## 说明
 
 - 账号密码等敏感信息仅通过 `accounts.json`（本地）或 `RUSTIX_ACCOUNTS`（环境变量/Secrets）传入，**不会**硬编码到脚本或提交到仓库。
-
-## 致谢
-感谢青云志大佬源码
 - 调试截图 `debug_*.png` 仅在找不到关键元素时生成，便于排查页面结构变化。
 - 若站点页面结构更新导致选择器失效，可在 `find_button_by_text` / `find_first_clickable` 中补充选择器。
 - Uptime Kuma 方案下，PAT 存在于 Uptime Kuma 配置中，请确保 Uptime Kuma 所在机器安全；建议用 fine-grained PAT 最小化权限并定期轮换。
+
+## 致谢
+
+感谢青云志大佬源码
