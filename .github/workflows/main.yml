@@ -12,9 +12,9 @@ on:
   #  types: [rustix]
 
 # 同一时间只允许一个实例运行
-concurrency:
-  group: rustix-auto
-  cancel-in-progress: false
+#concurrency:
+#  group: rustix-auto
+#  cancel-in-progress: false
 
 jobs:
   rustix-alive:
@@ -37,10 +37,10 @@ jobs:
         with:
           python-version: '3.13'
           cache: 'pip'
-          cache-dependency-path: rustix-auto/requirements.txt
+          cache-dependency-path: requirements.txt
 
       - name: 安装依赖
-        working-directory: rustix-auto
+      #  working-directory: rustix-auto
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
